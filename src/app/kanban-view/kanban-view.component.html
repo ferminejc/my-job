@@ -1,0 +1,25 @@
+<div class="kanban-board">
+  <div class="kanban-column" *ngFor="let column of columns">
+    <h3>{{ column.title }}</h3>
+    <div
+      cdkDropList
+      [cdkDropListData]="column.cards"
+      class="kanban-cards"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <mat-card
+        *ngFor="let card of column.cards"
+        cdkDrag
+        class="kanban-card"
+        [ngStyle]="{ 'border-left-color': column.color }"
+      >
+        <h4>{{ card.address }}</h4>
+        <p>{{ card.type }}</p>
+        <div class="kanban-card-footer">
+          <span>{{ card.amount | currency }}</span>
+          <span>{{ card.time }}</span>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
