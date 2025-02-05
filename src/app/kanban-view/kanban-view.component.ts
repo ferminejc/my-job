@@ -18,7 +18,7 @@ export class KanbanViewComponent {
       title: 'Assigned',
       cards: [
         {
-          address: '25 Poitier St McDowall QLD 4053',
+          address: '25 Poitier St McDowall QLD 405',
           type: 'Residential Mortgage',
           amount: 250,
           time: '16h 25m',
