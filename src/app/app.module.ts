@@ -7,9 +7,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatTabsModule } from '@angular/material/tabs';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { KanbanViewComponent } from './kanban-view/kanban-view.component';
+import { CalendarViewComponent } from './calendar-view/calendar-view.component';
 
 @NgModule({
-  declarations: [AppComponent, KanbanViewComponent],
+  declarations: [AppComponent, KanbanViewComponent, CalendarViewComponent],
   imports: [BrowserModule, AppRoutingModule, MatTabsModule, DragDropModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
